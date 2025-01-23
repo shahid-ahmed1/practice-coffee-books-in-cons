@@ -8,7 +8,7 @@ const Catagories = ({catagories}) => {
             <div className='max-w-screen-xl mx-auto'>
              <div role="tablist" className="tabs tabs-lifted">
         {
-            catagories.map((catagory)=><NavLink key={catagory.category} to='/cards' role="tab" className="tab">{catagory.category}</NavLink>)
+            catagories.map((category)=><NavLink key={category.category} to={`/category/${category.category}`} role="tab" className={({isActive})=>`tab text-2xl font-thin ${isActive ?'tab-active': ''}`}>{category.category}</NavLink>)
         }
 </div>
            </div>

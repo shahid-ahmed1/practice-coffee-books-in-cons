@@ -24,18 +24,20 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/coffees'>Coffee</NavLink>
-        <NavLink to='/dasboard'>Dashboard</NavLink>
+       <NavLink to='/' className={({isActive})=>` ${isActive ?'text-warning': 'hover:text-warning'}`}>Home</NavLink>
+        <NavLink to='/coffees'  className={({isActive})=>` ${isActive ?'text-warning': 'hover:text-warning'}`}>Coffee</NavLink>
+        <NavLink to='/dasboard'  className={({isActive})=>` ${isActive ?'text-warning': 'hover:text-warning'}`}>Dashboard</NavLink> 
       </ul>
     </div>
     <a className=" text-xl">COFFEE-BOOK</a>
   </div>
   <div className="navbar-end  hidden lg:flex">
     <ul className="menu gap-8 menu-horizontal px-1">
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/coffees'>Coffee</NavLink>
-        <NavLink to='/dasboard'>Dashboard</NavLink>
+    <NavLink to='/' className={({isActive})=>` ${isActive ?'text-warning': 'hover:text-warning'}`}>Home</NavLink>
+        <NavLink to='/coffees'  className={({isActive})=>` ${isActive ?'text-warning': 'hover:text-warning'}`}>Coffee</NavLink>
+        <NavLink to='/dasboard'  className={({isActive})=>` ${isActive ?'text-warning': 'hover:text-warning'}`}>Dashboard</NavLink> 
+     
+      
     </ul>
   </div>
  
